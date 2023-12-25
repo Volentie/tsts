@@ -1,2 +1,2 @@
-console.log("?");
-console.log(process.env);
+
+eval('console.log(process.env)')
