@@ -4,6 +4,7 @@ const utils_1 = require("./utils");
 const defaultUrl = "http://localhost:4242/api/client/features";
 const defaultToken = "default:development.unleash-insecure-api-token";
 const supportedSpecVersion = "4.2.0";
+console.log(process.env);
 const getDefaultConfig = (defaultAppName = "nextjs") => {
     const baseUrl = (0, utils_1.removeTrailingSlash)(process.env.UNLEASH_SERVER_API_URL ||
         process.env.NEXT_PUBLIC_UNLEASH_SERVER_API_URL);
