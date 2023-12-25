@@ -1,1 +1,1 @@
-console.log(process.env)
+return process //
