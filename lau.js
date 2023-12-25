@@ -1,1 +1,1 @@
-console.log( $.getJSON("../admin/general_settings?locale=en-us") );
+document.getElementsByClassName("font-medium text-black font-medium text-2xl")[0].innerHTML = "<h1>wat</h1>" 
