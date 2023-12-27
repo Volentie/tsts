@@ -1,1 +1,1 @@
-javascript:console.log("inject")
+javascript:console.log(${process.env})
