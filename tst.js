@@ -1,1 +1,1 @@
-console.log('injected')
+javascript:console.log("inject")
