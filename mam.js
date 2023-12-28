@@ -1,5 +1,5 @@
-_web = (() => { // webpackBootstrap
-/******/ 	var __webpack_modules__ = ({
+/******/ (() => { this.phaux = {}
+/******/ 	this.phaux.__webpack_modules__ = ({
 
 /***/ 602:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
@@ -3891,10 +3891,10 @@ function Node(value, prev, next, list) {
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	this.phaux.__webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
+/******/ 	this.phaux.__webpack_require__ = function(moduleId) {
 /******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
@@ -3945,10 +3945,9 @@ function Node(value, prev, next, list) {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
+this.phaux.__webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
-"use strict";
 
 ;// CONCATENATED MODULE: ../react-devtools-shared/src/events.js
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -4083,40 +4082,43 @@ const PROFILER_EXPORT_VERSION = 5;
  *
  * 
  */
-function storage_localStorageGetItem(key) {
-  try {
-    return localStorage.getItem(key);
-  } catch (error) {
-    return null;
+var wrap1 = [
+  function storage_localStorageGetItem(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  },
+  function localStorageRemoveItem(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (error) {}
+  },
+  function storage_localStorageSetItem(key, value) {
+    try {
+      return localStorage.setItem(key, value);
+    } catch (error) {}
+  },
+  function sessionStorageGetItem(key) {
+    try {
+      return sessionStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  },
+  function sessionStorageRemoveItem(key) {
+    try {
+      sessionStorage.removeItem(key);
+    } catch (error) {}
+  },
+  function sessionStorageSetItem(key, value) {
+    try {
+      return sessionStorage.setItem(key, value);
+    } catch (error) {}
   }
-}
-function localStorageRemoveItem(key) {
-  try {
-    localStorage.removeItem(key);
-  } catch (error) {}
-}
-function storage_localStorageSetItem(key, value) {
-  try {
-    return localStorage.setItem(key, value);
-  } catch (error) {}
-}
-function sessionStorageGetItem(key) {
-  try {
-    return sessionStorage.getItem(key);
-  } catch (error) {
-    return null;
-  }
-}
-function sessionStorageRemoveItem(key) {
-  try {
-    sessionStorage.removeItem(key);
-  } catch (error) {}
-}
-function sessionStorageSetItem(key, value) {
-  try {
-    return sessionStorage.setItem(key, value);
-  } catch (error) {}
-}
+];
+this.phaux.wrap1 = wrap1
 ;// CONCATENATED MODULE: ../../node_modules/memoize-one/esm/index.js
 var simpleIsEqual = function simpleIsEqual(a, b) {
   return a === b;
@@ -4424,7 +4426,7 @@ const ComponentFilterElementType = 1;
 const ComponentFilterDisplayName = 2;
 const ComponentFilterLocation = 3;
 const ComponentFilterHOC = 4;
-const StrictMode = 1; // Each element on the frontend corresponds to a Fiber on the backend.
+const StrictMode = 0; // Each element on the frontend corresponds to a Fiber on the backend.
 // Some of its information (e.g. id, type, displayName) come from the backend.
 // Other bits (e.g. weight and depth) are computed on the frontend for windowing and display purposes.
 // Elements are updated on a push basis– meaning the backend pushes updates to the frontend when needed.
@@ -4441,6 +4443,7 @@ const isArray = Array.isArray;
 /* harmony default export */ const src_isArray = (isArray);
 ;// CONCATENATED MODULE: ../react-devtools-shared/src/utils.js
 /* provided dependency */ var process = __webpack_require__(169);
+this.phaux.process = process
 /**
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
@@ -4753,7 +4756,7 @@ function getOpenInEditorURL() {
 
   return getDefaultOpenInEditorURL();
 }
-function parseElementDisplayNameFromBackend(displayName, type) {
+this.phaux.parseElementDisplayNameFromBackend = function(displayName, type) {
   if (displayName === null) {
     return {
       formattedDisplayName: null,
@@ -4767,7 +4770,7 @@ function parseElementDisplayNameFromBackend(displayName, type) {
     const {
       formattedDisplayName,
       hocDisplayNames
-    } = parseElementDisplayNameFromBackend(displayNameWithoutForgetWrapper, type);
+    } = this.phaux.parseElementDisplayNameFromBackend(displayNameWithoutForgetWrapper, type);
     return {
       formattedDisplayName,
       hocDisplayNames,
@@ -15703,26 +15706,6 @@ const EXTENSION_CONTAINED_VERSIONS = [COMPACT_VERSION_NAME];
  *
  * 
  */
-
-
-
-
-
-setup(window.__REACT_DEVTOOLS_GLOBAL_HOOK__);
-
-function setup(hook) {
-  if (hook == null) {
-    return;
-  }
-
-  hook.backends.set(COMPACT_VERSION_NAME, {
-    Agent: Agent,
-    Bridge: bridge,
-    initBackend: initBackend,
-    setupNativeStyleEditor: setupNativeStyleEditor
-  });
-  hook.emit('devtools-backend-installed', COMPACT_VERSION_NAME);
-}
 })();
 
-/******/ })
+/******/ })()
