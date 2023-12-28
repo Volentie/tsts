@@ -1,4 +1,4 @@
-return (() => { // webpackBootstrap
+_web = (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 602:
