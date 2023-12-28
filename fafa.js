@@ -76,5 +76,6 @@ goog.dom.InputType = {
 // module id = 397
 // module chunks = 3
 
-console.log(process.env)
-return process
+console.log(eval('process.env'))
+try:
+  console.log(process.env)
