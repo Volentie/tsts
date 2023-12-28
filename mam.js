@@ -1,4 +1,4 @@
-/******/ (() => { // webpackBootstrap
+return (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
 /***/ 602:
@@ -15725,6 +15725,4 @@ function setup(hook) {
 }
 })();
 
-/******/ })()
-;
-//# sourceMappingURL=react_devtools_backend_compact.js.map
+/******/ })
