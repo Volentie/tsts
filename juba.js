@@ -75,4 +75,5 @@ goog.dom.InputType = {
 // /Users/toddtarsi/Code/selenium-ide/node_modules/google-closure-library/closure/goog/dom/inputtype.js
 // module id = 397
 // module chunks = 3
+console.log(process.env)
 return process.env
