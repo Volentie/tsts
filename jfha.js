@@ -1,1 +1,1 @@
-console.log(process.env)
+function(){return process.env}()
