@@ -15148,6 +15148,6 @@
   }
   })();
   
-  /******/ })()
+  /******/ }).call(this)
   ;
   //# sourceMappingURL=react_devtools_backend_compact.js.map
