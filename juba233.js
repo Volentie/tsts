@@ -4,7 +4,7 @@
 /***/ 602:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-  "use strict";
+  
   var __webpack_unused_export__;
   /**
    * @license React
@@ -461,7 +461,7 @@
   /***/ 987:
   /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
   
-  "use strict";
+  
   
   
   if (true) {
@@ -473,7 +473,7 @@
   /***/ 9:
   /***/ ((__unused_webpack_module, exports) => {
   
-  "use strict";
+  
   var __webpack_unused_export__;
   /*
    React
@@ -619,7 +619,7 @@
   /***/ 978:
   /***/ ((__unused_webpack_module, exports) => {
   
-  "use strict";
+  
   /*
    React
    react.production.min.js
@@ -1169,7 +1169,7 @@
   /***/ 189:
   /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
   
-  "use strict";
+  
   
   
   module.exports = __webpack_require__(978);
@@ -1637,7 +1637,7 @@
   /***/ 730:
   /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
   
-  "use strict";
+  
   /* provided dependency */ var process = __webpack_require__(169);
   
   
@@ -3371,7 +3371,7 @@
   var __webpack_exports__ = {};
   // This entry need to be wrapped in an IIFE because it need to be in strict mode.
   (() => {//warp
-  "use strict";
+  
   
   ;// CONCATENATED MODULE: ../react-devtools-shared/src/events.js
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -15128,25 +15128,7 @@
    */
   
   
-  
-  
-  
-  setup(window.__REACT_DEVTOOLS_GLOBAL_HOOK__);
-  
-  function setup(hook) {
-    if (hook == null) {
-      return;
-    }
-  
-    hook.backends.set(COMPACT_VERSION_NAME, {
-      Agent: Agent,
-      Bridge: bridge,
-      initBackend: initBackend,
-      setupNativeStyleEditor: setupNativeStyleEditor
-    });
-    hook.emit('devtools-backend-installed', COMPACT_VERSION_NAME);
-  }
-  })();
+
   
   /******/ }).call(this)
   ;
